@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site vitrine dédié à l'histoire magique de Disney - Découvrez l'aventure de Walt Disney et l'évolution du studio.">
-    <title>Disney Magic - L'histoire d'un rêve</title>
+    <meta name="description" content="Revoria - Logement insolite aux 6 pièces thématiques Disney à 15 minutes de Disneyland Paris. Capacité 6 personnes, 400€/nuit.">
+    <title>Revoria - Séjour magique près de Disneyland Paris</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
         <div class="nav-container">
             <a href="index.html" class="logo">
                 <span class="logo-star">✦</span>
-                <span class="logo-text">Disney Magic</span>
+                <span class="logo-text">Revoria</span>
             </a>
             <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
                 <span></span>
@@ -25,7 +25,8 @@
             <nav class="nav-menu">
                 <ul>
                     <li><a href="index.html" class="active">Accueil</a></li>
-                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="logement.html">Le logement</a></li>
+                    <li><a href="reservation.html">Réservation</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -37,17 +38,22 @@
             <div class="hero-stars" aria-hidden="true"></div>
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="hero-subtitle">Bienvenue dans le monde magique de</span>
-                    <span class="hero-main">Disney</span>
+                    <span class="hero-subtitle">Bienvenue chez</span>
+                    <span class="hero-main">Revoria</span>
                 </h1>
                 <p class="hero-text">
-                    Depuis près d'un siècle, Disney enchante des générations d'enfants et d'adultes
-                    avec des histoires inoubliables, des personnages emblématiques et une magie qui
-                    traverse le temps.
+                    Un logement unique aux 6 univers magiques : Toy Story, Raiponce, Avengers,
+                    Pirates des Caraïbes, Ratatouille et le Monde de Némo.
+                    À <strong>15 minutes en voiture de Disneyland Paris</strong>, jusqu'à 6 voyageurs.
                 </p>
+                <div class="hero-meta">
+                    <span class="hero-tag">✨ 6 pièces thématiques</span>
+                    <span class="hero-tag">👥 Jusqu'à 6 personnes</span>
+                    <span class="hero-tag">🚗 15 min de Disneyland</span>
+                </div>
                 <div class="hero-buttons">
-                    <a href="a-propos.html" class="btn btn-primary">Découvrir l'histoire</a>
-                    <a href="contact.html" class="btn btn-secondary">Nous contacter</a>
+                    <a href="reservation.html" class="btn btn-primary">Réserver mon séjour</a>
+                    <a href="logement.html" class="btn btn-secondary">Découvrir les pièces</a>
                 </div>
             </div>
             <div class="hero-castle" aria-hidden="true">
@@ -67,37 +73,79 @@
 
         <section class="features">
             <div class="container">
-                <h2 class="section-title">Une magie intemporelle</h2>
-                <div class="features-grid">
-                    <article class="feature-card">
-                        <div class="feature-icon">✨</div>
-                        <h3>1923 - Les débuts</h3>
-                        <p>Walt et Roy Disney fondent le Disney Brothers Studio à Hollywood, donnant naissance à un empire de l'animation.</p>
+                <h2 class="section-title">Un voyage dans 6 univers Disney</h2>
+                <p class="section-intro">
+                    Chaque pièce de Revoria est une immersion totale dans un univers Disney.
+                    Vivez une expérience inoubliable, sans même mettre les pieds au parc.
+                </p>
+                <div class="features-grid rooms-preview">
+                    <article class="feature-card room-card" data-theme="toystory">
+                        <div class="feature-icon">🤠</div>
+                        <h3>Chambre Toy Story</h3>
+                        <p>Plongez dans la chambre d'Andy : jouets, ciel étoilé et l'univers de Woody et Buzz.</p>
                     </article>
-                    <article class="feature-card">
-                        <div class="feature-icon">🐭</div>
-                        <h3>1928 - Mickey Mouse</h3>
-                        <p>La sortie de "Steamboat Willie" introduit Mickey Mouse au monde et révolutionne l'animation sonore.</p>
+                    <article class="feature-card room-card" data-theme="raiponce">
+                        <div class="feature-icon">👑</div>
+                        <h3>Toilettes Raiponce</h3>
+                        <p>Une touche royale et féminine inspirée de la tour de Raiponce.</p>
                     </article>
-                    <article class="feature-card">
-                        <div class="feature-icon">🏰</div>
-                        <h3>1955 - Disneyland</h3>
-                        <p>Le premier parc Disneyland ouvre ses portes en Californie, transformant le rêve en réalité.</p>
+                    <article class="feature-card room-card" data-theme="avengers">
+                        <div class="feature-icon">🦸</div>
+                        <h3>Salon Avengers</h3>
+                        <p>Un salon héroïque aux couleurs des super-héros Marvel.</p>
                     </article>
-                    <article class="feature-card">
-                        <div class="feature-icon">🌟</div>
-                        <h3>Aujourd'hui</h3>
-                        <p>Disney continue d'inspirer avec des films, des parcs et des histoires qui touchent le cœur du monde entier.</p>
+                    <article class="feature-card room-card" data-theme="pirates">
+                        <div class="feature-icon">🏴‍☠️</div>
+                        <h3>Chambre Pirates des Caraïbes</h3>
+                        <p>Embarquez pour une aventure pirate, entre coffres au trésor et ambiance maritime.</p>
                     </article>
+                    <article class="feature-card room-card" data-theme="ratatouille">
+                        <div class="feature-icon">👨‍🍳</div>
+                        <h3>Cuisine Ratatouille</h3>
+                        <p>Cuisinez comme Rémy dans une cuisine inspirée du restaurant Gusteau's.</p>
+                    </article>
+                    <article class="feature-card room-card" data-theme="nemo">
+                        <div class="feature-icon">🐠</div>
+                        <h3>Salle de bain Némo</h3>
+                        <p>Une immersion sous-marine pour des bains rafraîchissants en compagnie de Némo.</p>
+                    </article>
+                </div>
+                <div class="text-center" style="margin-top:40px;">
+                    <a href="logement.html" class="btn btn-primary">Voir toutes les pièces en détail</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="container info-grid">
+                <div class="info-block">
+                    <div class="info-icon">👥</div>
+                    <h3>Jusqu'à 6 voyageurs</h3>
+                    <p>Idéal pour une famille ou un groupe d'amis qui veulent vivre une expérience Disney complète.</p>
+                </div>
+                <div class="info-block">
+                    <div class="info-icon">💶</div>
+                    <h3>400 € la nuit</h3>
+                    <p>Pour 6 personnes, soit ~67 € par voyageur. Petit-déjeuner et magie inclus !</p>
+                </div>
+                <div class="info-block">
+                    <div class="info-icon">📍</div>
+                    <h3>15 min de Disneyland</h3>
+                    <p>Profitez du parc en toute sérénité, et rentrez le soir dans un univers Disney à part entière.</p>
+                </div>
+                <div class="info-block">
+                    <div class="info-icon">📶</div>
+                    <h3>Wifi & lave-linge</h3>
+                    <p>Tout le confort du quotidien : connexion haut-débit et lave-linge à votre disposition.</p>
                 </div>
             </div>
         </section>
 
         <section class="cta">
             <div class="container">
-                <h2>Plongez dans l'histoire d'un rêve devenu réalité</h2>
-                <p>Découvrez comment un homme et sa souris ont changé le monde du divertissement à jamais.</p>
-                <a href="a-propos.html" class="btn btn-primary btn-large">En savoir plus</a>
+                <h2>Prêts à vivre la magie ?</h2>
+                <p>Vérifiez les disponibilités et réservez votre séjour à Revoria en quelques clics.</p>
+                <a href="reservation.html" class="btn btn-primary btn-large">Voir les disponibilités</a>
             </div>
         </section>
     </main>
@@ -107,15 +155,17 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <span class="logo-star">✦</span>
-                    <span>Disney Magic</span>
+                    <span>Revoria</span>
                 </div>
                 <nav class="footer-nav">
                     <a href="index.html">Accueil</a>
-                    <a href="a-propos.html">À propos</a>
+                    <a href="logement.html">Le logement</a>
+                    <a href="reservation.html">Réservation</a>
                     <a href="contact.html">Contact</a>
+                    <a href="https://www.instagram.com/Revoriatest/" target="_blank" rel="noopener">Instagram</a>
                 </nav>
                 <p class="footer-credits">
-                    Site vitrine éducatif &middot; Non affilié à The Walt Disney Company &middot; &copy; 2026
+                    Revoria &middot; Logement insolite près de Disneyland Paris &middot; &copy; <span class="current-year">2026</span>
                 </p>
             </div>
         </div>

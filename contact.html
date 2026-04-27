@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contactez-nous - Une question, une suggestion ou un partage sur l'histoire de Disney ? Nous sommes à l'écoute.">
-    <title>Contact - Disney Magic</title>
+    <meta name="description" content="Contactez Revoria pour toute question sur votre séjour - logement insolite Disney à 15 minutes de Disneyland Paris.">
+    <title>Contact - Revoria</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
         <div class="nav-container">
             <a href="index.html" class="logo">
                 <span class="logo-star">✦</span>
-                <span class="logo-text">Disney Magic</span>
+                <span class="logo-text">Revoria</span>
             </a>
             <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
                 <span></span>
@@ -25,7 +25,8 @@
             <nav class="nav-menu">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
-                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="logement.html">Le logement</a></li>
+                    <li><a href="reservation.html">Réservation</a></li>
                     <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
             </nav>
@@ -35,8 +36,8 @@
     <main>
         <section class="page-header">
             <div class="container">
-                <h1>Contactez-nous</h1>
-                <p class="page-subtitle">Une question, une suggestion ? Envoyez-nous un message magique ✨</p>
+                <h1>Contact</h1>
+                <p class="page-subtitle">Une question avant de réserver ? On est là pour vous</p>
             </div>
         </section>
 
@@ -45,9 +46,14 @@
                 <div class="contact-info">
                     <h2>Restons en contact</h2>
                     <p>
-                        Que vous soyez passionné par l'histoire de Disney, curieux d'en apprendre
-                        davantage ou désireux de partager vos souvenirs, nous serions ravis de
-                        vous lire.
+                        Pour toute question sur le logement, les équipements, les disponibilités
+                        ou pour organiser un séjour particulier (anniversaire, week-end en famille...),
+                        n'hésitez pas à nous contacter.
+                    </p>
+                    <p>
+                        Pour réserver directement, rendez-vous plutôt sur la
+                        <a href="reservation.html">page réservation</a> avec le calendrier des
+                        disponibilités.
                     </p>
 
                     <ul class="contact-list">
@@ -55,21 +61,28 @@
                             <span class="contact-icon">📧</span>
                             <div>
                                 <strong>Email</strong>
-                                <a href="mailto:contact@disney-magic.example">contact@disney-magic.example</a>
+                                <a href="mailto:revoria.test@gmail.com">revoria.test@gmail.com</a>
                             </div>
                         </li>
                         <li>
                             <span class="contact-icon">📍</span>
                             <div>
-                                <strong>Adresse</strong>
-                                <span>123 rue du Rêve, 75001 Paris, France</span>
+                                <strong>Localisation</strong>
+                                <span>15 minutes en voiture de Disneyland Paris (Marne-la-Vallée)</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-icon">📷</span>
+                            <div>
+                                <strong>Instagram</strong>
+                                <a href="https://www.instagram.com/Revoriatest/" target="_blank" rel="noopener">@Revoriatest</a>
                             </div>
                         </li>
                         <li>
                             <span class="contact-icon">⏰</span>
                             <div>
-                                <strong>Horaires</strong>
-                                <span>Du lundi au vendredi, 9h - 18h</span>
+                                <strong>Réponse sous</strong>
+                                <span>24 heures en moyenne</span>
                             </div>
                         </li>
                     </ul>
@@ -94,15 +107,16 @@
                         <label for="subject">Sujet</label>
                         <select id="subject" name="subject">
                             <option value="general">Question générale</option>
-                            <option value="histoire">À propos de l'histoire</option>
-                            <option value="suggestion">Suggestion</option>
+                            <option value="dispo">Disponibilités</option>
+                            <option value="equipement">Équipements</option>
+                            <option value="evenement">Événement spécial</option>
                             <option value="autre">Autre</option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Votre message *</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Partagez vos pensées..."></textarea>
+                        <textarea id="message" name="message" rows="5" required placeholder="Posez-nous votre question..."></textarea>
                         <span class="form-error" id="error-message"></span>
                     </div>
 
@@ -121,15 +135,17 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <span class="logo-star">✦</span>
-                    <span>Disney Magic</span>
+                    <span>Revoria</span>
                 </div>
                 <nav class="footer-nav">
                     <a href="index.html">Accueil</a>
-                    <a href="a-propos.html">À propos</a>
+                    <a href="logement.html">Le logement</a>
+                    <a href="reservation.html">Réservation</a>
                     <a href="contact.html">Contact</a>
+                    <a href="https://www.instagram.com/Revoriatest/" target="_blank" rel="noopener">Instagram</a>
                 </nav>
                 <p class="footer-credits">
-                    Site vitrine éducatif &middot; Non affilié à The Walt Disney Company &middot; &copy; 2026
+                    Revoria &middot; Logement insolite près de Disneyland Paris &middot; &copy; <span class="current-year">2026</span>
                 </p>
             </div>
         </div>

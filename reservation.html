@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vérifiez les disponibilités de Revoria et réservez votre séjour magique près de Disneyland Paris. 400€/nuit pour 6 voyageurs.">
+    <title>Réservation - Revoria</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-star">✦</span>
+                <span class="logo-text">Revoria</span>
+            </a>
+            <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="logement.html">Le logement</a></li>
+                    <li><a href="reservation.html" class="active">Réservation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Réservation</h1>
+                <p class="page-subtitle">Choisissez vos dates et vivez la magie</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="pricing-banner">
+                    <div class="pricing-info">
+                        <span class="pricing-label">Tarif</span>
+                        <strong class="pricing-amount">400 €</strong>
+                        <span class="pricing-detail">par nuit · jusqu'à 6 voyageurs</span>
+                    </div>
+                    <div class="pricing-legend">
+                        <span class="legend-item"><span class="legend-dot legend-available"></span> Disponible</span>
+                        <span class="legend-item"><span class="legend-dot legend-booked"></span> Réservé</span>
+                        <span class="legend-item"><span class="legend-dot legend-selected"></span> Votre sélection</span>
+                    </div>
+                </div>
+
+                <div class="calendar-section">
+                    <div class="calendar-header">
+                        <button class="calendar-nav" id="prevMonth" aria-label="Mois précédent">‹</button>
+                        <div class="calendar-months">
+                            <h2 id="monthLabel1">—</h2>
+                            <h2 id="monthLabel2" class="hide-mobile">—</h2>
+                        </div>
+                        <button class="calendar-nav" id="nextMonth" aria-label="Mois suivant">›</button>
+                    </div>
+                    <div class="calendar-grids">
+                        <div class="calendar-grid" id="calendar1"></div>
+                        <div class="calendar-grid hide-mobile" id="calendar2"></div>
+                    </div>
+
+                    <div class="selection-summary" id="selectionSummary" hidden>
+                        <div class="summary-line">
+                            <span>Arrivée</span>
+                            <strong id="summaryStart">—</strong>
+                        </div>
+                        <div class="summary-line">
+                            <span>Départ</span>
+                            <strong id="summaryEnd">—</strong>
+                        </div>
+                        <div class="summary-line">
+                            <span>Nombre de nuits</span>
+                            <strong id="summaryNights">—</strong>
+                        </div>
+                        <div class="summary-line summary-total">
+                            <span>Total</span>
+                            <strong id="summaryTotal">—</strong>
+                        </div>
+                        <button class="btn btn-secondary btn-small" id="resetSelection">Réinitialiser</button>
+                    </div>
+                </div>
+
+                <form class="reservation-form" id="reservationForm" novalidate>
+                    <h2>Vos coordonnées</h2>
+                    <p class="form-intro">
+                        Sélectionnez vos dates dans le calendrier ci-dessus, puis remplissez ce
+                        formulaire pour envoyer votre demande. Nous reviendrons vers vous sous 24h
+                        pour confirmer.
+                    </p>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="resName">Nom complet *</label>
+                            <input type="text" id="resName" name="name" required placeholder="Votre nom">
+                            <span class="form-error" id="error-resName"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="resEmail">Email *</label>
+                            <input type="email" id="resEmail" name="email" required placeholder="vous@exemple.com">
+                            <span class="form-error" id="error-resEmail"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="resPhone">Téléphone</label>
+                            <input type="tel" id="resPhone" name="phone" placeholder="06 12 34 56 78">
+                        </div>
+                        <div class="form-group">
+                            <label for="resGuests">Nombre de voyageurs *</label>
+                            <select id="resGuests" name="guests" required>
+                                <option value="">— Choisir —</option>
+                                <option value="1">1 voyageur</option>
+                                <option value="2">2 voyageurs</option>
+                                <option value="3">3 voyageurs</option>
+                                <option value="4">4 voyageurs</option>
+                                <option value="5">5 voyageurs</option>
+                                <option value="6">6 voyageurs</option>
+                            </select>
+                            <span class="form-error" id="error-resGuests"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="resStartDisplay">Date d'arrivée *</label>
+                            <input type="text" id="resStartDisplay" readonly placeholder="Sélectionnez dans le calendrier" required>
+                            <span class="form-error" id="error-resStart"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="resEndDisplay">Date de départ *</label>
+                            <input type="text" id="resEndDisplay" readonly placeholder="Sélectionnez dans le calendrier" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resMessage">Message (optionnel)</label>
+                        <textarea id="resMessage" name="message" rows="4" placeholder="Questions, demandes spéciales..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Envoyer ma demande ✨</button>
+
+                    <p class="form-success" id="resSuccess" hidden>
+                        ✦ Votre demande a bien été envoyée ! Nous revenons vers vous sous 24h.
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-star">✦</span>
+                    <span>Revoria</span>
+                </div>
+                <nav class="footer-nav">
+                    <a href="index.html">Accueil</a>
+                    <a href="logement.html">Le logement</a>
+                    <a href="reservation.html">Réservation</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="https://www.instagram.com/Revoriatest/" target="_blank" rel="noopener">Instagram</a>
+                </nav>
+                <p class="footer-credits">
+                    Revoria &middot; Logement insolite près de Disneyland Paris &middot; &copy; <span class="current-year">2026</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
