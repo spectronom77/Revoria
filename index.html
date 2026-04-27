@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="navbar">
@@ -26,7 +26,7 @@
                 <ul>
                     <li><a href="index.html" class="active">Accueil</a></li>
                     <li><a href="logement.html">Le logement</a></li>
-                    <li><a href="reservation.html">Réservation</a></li>
+                    <li><a href="reservation.html" class="nav-cta">Réserver</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -73,45 +73,64 @@
 
         <section class="features">
             <div class="container">
-                <h2 class="section-title">Un voyage dans 6 univers Disney</h2>
+                <span class="section-eyebrow">Explorer par univers</span>
+                <h2 class="section-title">Choisissez votre monde</h2>
                 <p class="section-intro">
-                    Chaque pièce de Revoria est une immersion totale dans un univers Disney.
-                    Vivez une expérience inoubliable, sans même mettre les pieds au parc.
+                    Six univers, six immersions totales. Chaque pièce de Revoria vous transporte
+                    dans une saga Disney différente.
                 </p>
-                <div class="features-grid rooms-preview">
-                    <article class="feature-card room-card" data-theme="toystory">
-                        <div class="feature-icon">🤠</div>
-                        <h3>Chambre Toy Story</h3>
-                        <p>Plongez dans la chambre d'Andy : jouets, ciel étoilé et l'univers de Woody et Buzz.</p>
-                    </article>
-                    <article class="feature-card room-card" data-theme="raiponce">
-                        <div class="feature-icon">👑</div>
-                        <h3>Toilettes Raiponce</h3>
-                        <p>Une touche royale et féminine inspirée de la tour de Raiponce.</p>
-                    </article>
-                    <article class="feature-card room-card" data-theme="avengers">
-                        <div class="feature-icon">🦸</div>
-                        <h3>Salon Avengers</h3>
-                        <p>Un salon héroïque aux couleurs des super-héros Marvel.</p>
-                    </article>
-                    <article class="feature-card room-card" data-theme="pirates">
-                        <div class="feature-icon">🏴‍☠️</div>
-                        <h3>Chambre Pirates des Caraïbes</h3>
-                        <p>Embarquez pour une aventure pirate, entre coffres au trésor et ambiance maritime.</p>
-                    </article>
-                    <article class="feature-card room-card" data-theme="ratatouille">
-                        <div class="feature-icon">👨‍🍳</div>
-                        <h3>Cuisine Ratatouille</h3>
-                        <p>Cuisinez comme Rémy dans une cuisine inspirée du restaurant Gusteau's.</p>
-                    </article>
-                    <article class="feature-card room-card" data-theme="nemo">
-                        <div class="feature-icon">🐠</div>
-                        <h3>Salle de bain Némo</h3>
-                        <p>Une immersion sous-marine pour des bains rafraîchissants en compagnie de Némo.</p>
-                    </article>
+                <div class="rooms-preview">
+                    <a href="logement.html#toystory" class="room-card" data-theme="toystory">
+                        <span class="room-card-badge">Chambre</span>
+                        <div class="room-card-icon">🤠</div>
+                        <div class="room-card-info">
+                            <h3>Toy Story</h3>
+                            <p>Chambre des jouets vivants</p>
+                        </div>
+                    </a>
+                    <a href="logement.html#raiponce" class="room-card" data-theme="raiponce">
+                        <span class="room-card-badge">Toilettes</span>
+                        <div class="room-card-icon">👑</div>
+                        <div class="room-card-info">
+                            <h3>Raiponce</h3>
+                            <p>Tour royale aux lanternes dorées</p>
+                        </div>
+                    </a>
+                    <a href="logement.html#avengers" class="room-card" data-theme="avengers">
+                        <span class="room-card-badge">Salon</span>
+                        <div class="room-card-icon">🦸</div>
+                        <div class="room-card-info">
+                            <h3>Avengers</h3>
+                            <p>Repère des super-héros Marvel</p>
+                        </div>
+                    </a>
+                    <a href="logement.html#pirates" class="room-card" data-theme="pirates">
+                        <span class="room-card-badge">Chambre</span>
+                        <div class="room-card-icon">🏴‍☠️</div>
+                        <div class="room-card-info">
+                            <h3>Pirates des Caraïbes</h3>
+                            <p>Cabine du Black Pearl</p>
+                        </div>
+                    </a>
+                    <a href="logement.html#ratatouille" class="room-card" data-theme="ratatouille">
+                        <span class="room-card-badge">Cuisine</span>
+                        <div class="room-card-icon">👨‍🍳</div>
+                        <div class="room-card-info">
+                            <h3>Ratatouille</h3>
+                            <p>Bistrot parisien à la Gusteau's</p>
+                        </div>
+                    </a>
+                    <a href="logement.html#nemo" class="room-card" data-theme="nemo">
+                        <span class="room-card-badge">Salle de bain</span>
+                        <div class="room-card-icon">🐠</div>
+                        <div class="room-card-info">
+                            <h3>Le Monde de Némo</h3>
+                            <p>Immersion sous les océans</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="text-center" style="margin-top:40px;">
-                    <a href="logement.html" class="btn btn-primary">Voir toutes les pièces en détail</a>
+                <div class="text-center" style="margin-top:60px;">
+                    <a href="logement.html" class="btn btn-primary">Découvrir toutes les pièces</a>
                 </div>
             </div>
         </section>
