@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez-nous - Une question, une suggestion ou un partage sur l'histoire de Disney ? Nous sommes à l'écoute.">
+    <title>Contact - Disney Magic</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-star">✦</span>
+                <span class="logo-text">Disney Magic</span>
+            </a>
+            <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Contactez-nous</h1>
+                <p class="page-subtitle">Une question, une suggestion ? Envoyez-nous un message magique ✨</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <h2>Restons en contact</h2>
+                    <p>
+                        Que vous soyez passionné par l'histoire de Disney, curieux d'en apprendre
+                        davantage ou désireux de partager vos souvenirs, nous serions ravis de
+                        vous lire.
+                    </p>
+
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:contact@disney-magic.example">contact@disney-magic.example</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <strong>Adresse</strong>
+                                <span>123 rue du Rêve, 75001 Paris, France</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-icon">⏰</span>
+                            <div>
+                                <strong>Horaires</strong>
+                                <span>Du lundi au vendredi, 9h - 18h</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="contact-form" id="contactForm" novalidate>
+                    <h2>Envoyez-nous un message</h2>
+
+                    <div class="form-group">
+                        <label for="name">Nom complet *</label>
+                        <input type="text" id="name" name="name" required placeholder="Votre nom">
+                        <span class="form-error" id="error-name"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="vous@exemple.com">
+                        <span class="form-error" id="error-email"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <select id="subject" name="subject">
+                            <option value="general">Question générale</option>
+                            <option value="histoire">À propos de l'histoire</option>
+                            <option value="suggestion">Suggestion</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Votre message *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Partagez vos pensées..."></textarea>
+                        <span class="form-error" id="error-message"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Envoyer le message ✨</button>
+
+                    <p class="form-success" id="formSuccess" hidden>
+                        ✦ Merci ! Votre message a bien été envoyé. Nous vous répondrons rapidement.
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-star">✦</span>
+                    <span>Disney Magic</span>
+                </div>
+                <nav class="footer-nav">
+                    <a href="index.html">Accueil</a>
+                    <a href="a-propos.html">À propos</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <p class="footer-credits">
+                    Site vitrine éducatif &middot; Non affilié à The Walt Disney Company &middot; &copy; 2026
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
